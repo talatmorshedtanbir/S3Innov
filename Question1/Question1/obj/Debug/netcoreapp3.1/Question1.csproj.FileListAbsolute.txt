@@ -1,0 +1,13 @@
+H:\S3 Innovative\Question1\Question1\obj\Debug\netcoreapp3.1\Question1.csprojAssemblyReference.cache
+H:\S3 Innovative\Question1\Question1\obj\Debug\netcoreapp3.1\Question1.AssemblyInfoInputs.cache
+H:\S3 Innovative\Question1\Question1\obj\Debug\netcoreapp3.1\Question1.AssemblyInfo.cs
+H:\S3 Innovative\Question1\Question1\obj\Debug\netcoreapp3.1\Question1.csproj.CoreCompileInputs.cache
+H:\S3 Innovative\Question1\Question1\bin\Debug\netcoreapp3.1\Question1.exe
+H:\S3 Innovative\Question1\Question1\bin\Debug\netcoreapp3.1\Question1.deps.json
+H:\S3 Innovative\Question1\Question1\bin\Debug\netcoreapp3.1\Question1.runtimeconfig.json
+H:\S3 Innovative\Question1\Question1\bin\Debug\netcoreapp3.1\Question1.runtimeconfig.dev.json
+H:\S3 Innovative\Question1\Question1\bin\Debug\netcoreapp3.1\Question1.dll
+H:\S3 Innovative\Question1\Question1\bin\Debug\netcoreapp3.1\Question1.pdb
+H:\S3 Innovative\Question1\Question1\obj\Debug\netcoreapp3.1\Question1.dll
+H:\S3 Innovative\Question1\Question1\obj\Debug\netcoreapp3.1\Question1.pdb
+H:\S3 Innovative\Question1\Question1\obj\Debug\netcoreapp3.1\Question1.genruntimeconfig.cache
