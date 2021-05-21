@@ -1,5 +1,8 @@
 ﻿using Autofac;
 using BuildingDataProject.Core.Contexts;
+using BuildingDataProject.Core.Repositories;
+using BuildingDataProject.Core.Services;
+using BuildingDataProject.Core.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -23,6 +26,15 @@ namespace BuildingDataProject.Core.Modules
                 .WithParameter("connectionString", _connectionString)
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<BuildingRepository>().As<IBuildingRepository>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<BuildingService>().As<IBuildingService>()
+               .InstancePerLifetimeScope();
+
+            builder.RegisterType<BuildingUnitOfWork>().As<IBuildingUnitOfWork>()
+              .InstancePerLifetimeScope();
 
             base.Load(builder);
         }

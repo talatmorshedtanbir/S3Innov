@@ -10,3 +10,6 @@ H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Core\
 H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Core\obj\Debug\netcoreapp3.1\BuildingDataProject.Core.csproj.CopyComplete
 H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Core\obj\Debug\netcoreapp3.1\BuildingDataProject.Core.dll
 H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Core\obj\Debug\netcoreapp3.1\BuildingDataProject.Core.pdb
+H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Core\bin\Debug\netcoreapp3.1\BuildingDataProject.Core.runtimeconfig.json
+H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Core\bin\Debug\netcoreapp3.1\BuildingDataProject.Core.runtimeconfig.dev.json
+H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Core\obj\Debug\netcoreapp3.1\BuildingDataProject.Core.genruntimeconfig.cache

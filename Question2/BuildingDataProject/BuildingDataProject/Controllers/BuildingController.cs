@@ -1,4 +1,5 @@
 ﻿using BuildingDataProject.Core.Entities;
+using BuildingDataProject.Core.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -15,18 +16,18 @@ namespace BuildingDataProject.Controllers
     public class BuildingController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private readonly ILogger<BuildingController> _logger;
-        public BuildingController(IConfiguration configuration)
+        private IBuildingService _buildingService;
+        public BuildingController(IConfiguration configuration, IBuildingService buildingService)
         {
             _configuration = configuration;
+            _buildingService = buildingService;
         }
 
         [HttpGet]
         public IEnumerable<Building> Get()
         {
-            var buildings = new List<Building>() { 
-                new Building(){ Id = 1, Location = "Dhk", Name = "Ant" },
-                new Building(){ Id = 2, Location = "Dhk", Name = "Ant" }};
+            var buildings = _buildingService.GetBuildings();
+
             return buildings;
         }
     }
