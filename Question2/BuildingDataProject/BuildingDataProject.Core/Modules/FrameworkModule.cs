@@ -48,6 +48,13 @@ namespace BuildingDataProject.Core.Modules
             builder.RegisterType<DataFieldRepository>().As<IDataFieldRepository>()
              .InstancePerLifetimeScope();
 
+            builder.RegisterType<ReadingService>().As<IReadingService>()
+            .InstancePerLifetimeScope();
+
+            builder.RegisterType<ReadingRepository>().As<IReadingRepository>()
+             .InstancePerLifetimeScope();
+
+
             base.Load(builder);
         }
     }
