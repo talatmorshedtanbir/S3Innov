@@ -5,31 +5,29 @@ export class FetchData extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { forecasts: [], loading: true };
+    this.state = { buildings: [], loading: true };
   }
 
   componentDidMount() {
-    this.populateWeatherData();
+    this.populateBuildingData();
   }
 
-  static renderForecastsTable(forecasts) {
+  static renderBuildingsTable(buildings) {
     return (
       <table className='table table-striped' aria-labelledby="tabelLabel">
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Location</th>
           </tr>
         </thead>
-        <tbody>
-          {forecasts.map(forecast =>
-            <tr key={forecast.id}>
-              <td>{forecast.id}</td>
-              <td>{forecast.name}</td>
-              <td>{forecast.location}</td>
-              <td>{forecast.location}</td>
+            <tbody>
+           {buildings.data.map(building =>
+            <tr key={building.id}>
+              <td>{building.id}</td>
+              <td>{building.name}</td>
+              <td>{building.location}</td>
             </tr>
           )}
         </tbody>
@@ -39,22 +37,23 @@ export class FetchData extends Component {
 
   render() {
     let contents = this.state.loading
-      ? <p><em>Loading...</em></p>
-      : FetchData.renderForecastsTable(this.state.forecasts);
+        ? <p><em>Loading...</em></p>
+        : FetchData.renderBuildingsTable(this.state.buildings);
 
     return (
       <div>
-        <h1 id="tabelLabel" >Weather forecast</h1>
+        <h1 id="tabelLabel" >Building Data</h1>
         <p>This component demonstrates fetching data from the server.</p>
         {contents}
       </div>
     );
   }
 
-  async populateWeatherData() {
-    const response = await fetch('api/building');
+  async populateBuildingData() {
+    const response = await fetch('api/building/getbuildings');
       const data = await response.json();
       console.log(data);
-    this.setState({ forecasts: data, loading: false });
+      console.log(data.data);
+      this.setState({ buildings: data, loading: false });
   }
 }

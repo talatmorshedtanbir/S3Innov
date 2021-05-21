@@ -23,12 +23,19 @@ namespace BuildingDataProject.Controllers
             _buildingService = buildingService;
         }
 
-        [HttpGet]
-        public IEnumerable<Building> Get()
+        [HttpGet("getbuildings")]
+        public IActionResult Get()
         {
             var buildings = _buildingService.GetBuildings();
 
-            return buildings;
+            var result = new
+            {
+                statusCode = 200,
+                success = true,
+                data = buildings
+            };
+
+            return Ok(result);
         }
     }
 }
