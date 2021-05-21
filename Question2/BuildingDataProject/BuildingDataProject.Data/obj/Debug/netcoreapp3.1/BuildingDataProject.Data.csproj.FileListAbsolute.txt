@@ -1,0 +1,9 @@
+H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Data\bin\Debug\netcoreapp3.1\BuildingDataProject.Data.deps.json
+H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Data\bin\Debug\netcoreapp3.1\BuildingDataProject.Data.dll
+H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Data\bin\Debug\netcoreapp3.1\BuildingDataProject.Data.pdb
+H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Data\obj\Debug\netcoreapp3.1\BuildingDataProject.Data.csprojAssemblyReference.cache
+H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Data\obj\Debug\netcoreapp3.1\BuildingDataProject.Data.AssemblyInfoInputs.cache
+H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Data\obj\Debug\netcoreapp3.1\BuildingDataProject.Data.AssemblyInfo.cs
+H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Data\obj\Debug\netcoreapp3.1\BuildingDataProject.Data.csproj.CoreCompileInputs.cache
+H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Data\obj\Debug\netcoreapp3.1\BuildingDataProject.Data.dll
+H:\S3 Innovative\S3Innov\Question2\BuildingDataProject\BuildingDataProject.Data\obj\Debug\netcoreapp3.1\BuildingDataProject.Data.pdb

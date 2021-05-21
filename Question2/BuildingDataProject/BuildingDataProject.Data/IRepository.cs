@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Query;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,11 +27,6 @@ namespace BuildingDataProject.Data
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             string includeProperties = "", int pageIndex = 1, int pageSize = 10, bool isTrackingOff = false);
 
-        (IList<TEntity> data, int total, int totalDisplay) GetDynamic(
-            Expression<Func<TEntity, bool>> filter = null,
-            string orderBy = null,
-            string includeProperties = "", int pageIndex = 1, int pageSize = 10, bool isTrackingOff = false);
-
         IList<TEntity> Get(Expression<Func<TEntity, bool>> filter = null,
             Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
             string includeProperties = "", bool isTrackingOff = false);
@@ -46,8 +42,5 @@ namespace BuildingDataProject.Data
                     bool disableTracking = true);
         Task AddRangeAsync(IList<TEntity> entities);
         Task UpdateAsync(TEntity entity);
-        IList<TEntity> GetDynamic(Expression<Func<TEntity, bool>> filter = null,
-            string orderBy = null,
-            string includeProperties = "", bool isTrackingOff = false);
     }
 }

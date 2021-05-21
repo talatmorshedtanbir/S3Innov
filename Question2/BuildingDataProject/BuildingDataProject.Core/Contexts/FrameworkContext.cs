@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BuildingDataProject.Core.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -27,27 +28,29 @@ namespace BuildingDataProject.Core.Contexts
 
             base.OnConfiguring(dbContextOptionsBuilder);
         }
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<EmailReport>()
-                .HasOne<Campaign>(c => c.Campaign)
-                .WithMany(e => e.EmailReports)
-                .HasForeignKey(c => c.CampaignId);
-
-            builder.Entity<GroupContact>()
-                .HasKey(gc => new { gc.GroupId, gc.ContactId });
+            builder.Entity<Reading>()
+                .HasKey(x => new { x.BuildingId, x.ObjectId, x.DataFieldId });
+            builder.Entity<Reading>()
+                .HasOne<Building>(c => c.Building)
+                .WithMany(e => e.Readings)
+                .HasForeignKey(c => c.BuildingId);
+            builder.Entity<Reading>()
+                .HasOne<Entities.Object>(c => c.Object)
+                .WithMany(e => e.Readings)
+                .HasForeignKey(c => c.ObjectId);
+            builder.Entity<Reading>()
+                .HasOne<DataField>(c => c.DataField)
+                .WithMany(e => e.Readings)
+                .HasForeignKey(c => c.DataFieldId);
 
             base.OnModelCreating(builder);
-
         }
 
-        public DbSet<Smtp> Smtps { get; set; }
-        public DbSet<Group> Groups { get; set; }
-        public DbSet<Campaign> Campaigns { get; set; }
-        public DbSet<Contact> Contacts { get; set; }
-        public DbSet<GroupContact> GroupContacts { get; set; }
-        public DbSet<ValueMap> ValueMaps { get; set; }
-        public DbSet<MapField> MapFields { get; set; }
+        public DbSet<Building> Buildings { get; set; }
+        public DbSet<Entities.Object> Objects { get; set; }
+        public DbSet<DataField> DataField { get; set; }
+
     }
 }

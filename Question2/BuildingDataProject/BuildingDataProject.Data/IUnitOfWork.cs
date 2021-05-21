@@ -4,7 +4,8 @@ using System.Text;
 
 namespace BuildingDataProject.Data
 {
-    class IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
+        void Save();
     }
 }

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace BuildingDataProject.Data
 {
-    interface IEntity
+    public interface IEntity<T>
     {
+        T Id { get; set; }
     }
 }
