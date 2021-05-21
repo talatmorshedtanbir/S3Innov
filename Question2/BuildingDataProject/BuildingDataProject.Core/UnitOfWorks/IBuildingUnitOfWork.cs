@@ -9,5 +9,6 @@ namespace BuildingDataProject.Core.UnitOfWorks
     public interface IBuildingUnitOfWork : IUnitOfWork
     {
         IBuildingRepository BuildingRepository { get; set; }
+        IObjectRepository ObjectRepository { get; set; }
     }
 }

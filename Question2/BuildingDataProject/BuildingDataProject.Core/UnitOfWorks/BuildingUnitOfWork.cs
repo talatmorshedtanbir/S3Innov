@@ -10,10 +10,11 @@ namespace BuildingDataProject.Core.UnitOfWorks
     public class BuildingUnitOfWork : UnitOfWork, IBuildingUnitOfWork
     {
         public IBuildingRepository BuildingRepository { get; set; }
-
-        public BuildingUnitOfWork(FrameworkContext context, IBuildingRepository buildingRepository) : base(context)
+        public IObjectRepository ObjectRepository { get; set; }
+        public BuildingUnitOfWork(FrameworkContext context, IBuildingRepository buildingRepository, IObjectRepository objectRepository) : base(context)
         {
             BuildingRepository = buildingRepository;
+            ObjectRepository = objectRepository;
         }
     }
 }

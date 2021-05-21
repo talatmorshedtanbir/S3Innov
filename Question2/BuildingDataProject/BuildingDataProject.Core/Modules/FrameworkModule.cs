@@ -36,6 +36,12 @@ namespace BuildingDataProject.Core.Modules
             builder.RegisterType<BuildingUnitOfWork>().As<IBuildingUnitOfWork>()
               .InstancePerLifetimeScope();
 
+            builder.RegisterType<ObjectService>().As<IObjectService>()
+             .InstancePerLifetimeScope();
+
+            builder.RegisterType<ObjectRepository>().As<IObjectRepository>()
+             .InstancePerLifetimeScope();
+
             base.Load(builder);
         }
     }
