@@ -11,10 +11,15 @@ namespace BuildingDataProject.Core.UnitOfWorks
     {
         public IBuildingRepository BuildingRepository { get; set; }
         public IObjectRepository ObjectRepository { get; set; }
-        public BuildingUnitOfWork(FrameworkContext context, IBuildingRepository buildingRepository, IObjectRepository objectRepository) : base(context)
+        public IDataFieldRepository DataFieldRepository { get; set; }
+        public BuildingUnitOfWork(FrameworkContext context,
+            IBuildingRepository buildingRepository, 
+            IObjectRepository objectRepository,
+            IDataFieldRepository dataFieldRepository) : base(context)
         {
             BuildingRepository = buildingRepository;
             ObjectRepository = objectRepository;
+            DataFieldRepository = dataFieldRepository;
         }
     }
 }

@@ -10,5 +10,6 @@ namespace BuildingDataProject.Core.UnitOfWorks
     {
         IBuildingRepository BuildingRepository { get; set; }
         IObjectRepository ObjectRepository { get; set; }
+        IDataFieldRepository DataFieldRepository { get; set; }
     }
 }

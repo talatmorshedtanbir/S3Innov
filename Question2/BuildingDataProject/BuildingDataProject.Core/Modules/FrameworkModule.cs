@@ -42,6 +42,12 @@ namespace BuildingDataProject.Core.Modules
             builder.RegisterType<ObjectRepository>().As<IObjectRepository>()
              .InstancePerLifetimeScope();
 
+            builder.RegisterType<DataFieldService>().As<IDataFieldService>()
+             .InstancePerLifetimeScope();
+
+            builder.RegisterType<DataFieldRepository>().As<IDataFieldRepository>()
+             .InstancePerLifetimeScope();
+
             base.Load(builder);
         }
     }
